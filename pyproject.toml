@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nnskew"
+version = "0.1.0"
+description = "Compute dinucleotide skew (NNskew) and export to BigWig"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [{name="Your Name", email="you@example.com"}]
+
+[project.scripts]
+nnskew = "nnskew.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/nnskew"]
